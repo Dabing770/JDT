@@ -444,8 +444,22 @@ a {
 }
 
 .price-panel__description {
+  position: relative;
   align-self: center;
+  padding-left: 24px;
+  color: var(--text);
   line-height: 1.7;
+}
+
+.price-panel__description::before {
+  position: absolute;
+  top: 0.68em;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--green);
+  content: "";
 }
 
 .price-panel__price {
@@ -480,6 +494,36 @@ a {
   border-radius: 999px;
   background: var(--green);
   content: "";
+}
+
+.price-note {
+  display: grid;
+  gap: 8px;
+  padding: clamp(22px, 3vw, 30px);
+  border: 1px solid rgba(56, 224, 135, 0.24);
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, rgba(56, 224, 135, 0.1), transparent 58%),
+    rgba(255, 255, 255, 0.06);
+}
+
+.price-note span {
+  color: var(--green);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.price-note strong {
+  color: var(--text);
+  font-size: clamp(1.35rem, 3vw, 2rem);
+}
+
+.price-note p {
+  max-width: 620px;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
 }
 
 .footer {
