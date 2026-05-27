@@ -419,6 +419,11 @@ a {
     rgba(255, 255, 255, 0.02);
 }
 
+.price-list {
+  display: grid;
+  gap: 18px;
+}
+
 .price-panel {
   display: grid;
   grid-template-columns: minmax(180px, 0.82fr) minmax(0, 1fr);
@@ -432,9 +437,15 @@ a {
 }
 
 .price-panel__label,
-.price-panel__tax {
+.price-panel__tax,
+.price-panel__description {
   margin: 0;
   color: var(--muted);
+}
+
+.price-panel__description {
+  align-self: center;
+  line-height: 1.7;
 }
 
 .price-panel__price {
